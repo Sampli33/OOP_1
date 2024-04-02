@@ -1,0 +1,22 @@
+from solution_6 import Point
+from solution_10 import Segment, CoordinateSystem
+
+x1 = Point((5, 10))
+print(x1)
+x2 = Point((2, 1))
+x3 = Point((3, -10))
+x4 = Point((2, 8))
+segment1 = Segment(x1, x2)
+print(segment1)
+segment2 = Segment(x3, x4)
+print(segment2)
+print(segment1.one_intersection)
+print(segment2.one_intersection)
+cor_system = CoordinateSystem()
+cor_system.add_segment(segment1)
+print(cor_system)
+cor_system.add_segment(segment2)
+cor_system.add_segment(Segment(x2, x3))
+cor_system.add_segment(Segment(Point((-7, 4)), Point((-20, -7))))
+print(cor_system)
+print(cor_system.axis_intersection())
