@@ -52,7 +52,6 @@ class CoordinateSystem:
     add_segment(segment): Adds a segment to the coordinate system.
     axis_intersection(): Determines the number of segments that intersect only one coordinate axis.
     __str__(): Returns a string representation of the coordinate system.
-    __repr__(): Returns a string representation of the coordinate system for internal use.
     """
     segments =[]
 
