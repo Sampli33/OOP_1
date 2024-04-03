@@ -55,16 +55,16 @@ class CoordinateSystem:
     """
     segments =[]
 
-    def add_segment(segment):
+    def add_segment(self, segment):
         """
         Adds a segment to the coordinate system.
 
         Parameters:
         segment (Segment): The segment to be added.
         """
-       CoordinateSystem.segments.append(segment)
+        CoordinateSystem.segments.append(segment)
 
-    def axis_intersection():
+    def axis_intersection(self):
         """
         Determines the number of segments that intersect only one coordinate axis.
 
@@ -77,7 +77,8 @@ class CoordinateSystem:
                 counter += 1
         return counter
 
-    def __str__():
+
+    def __str__(self):
         """
         Returns a string representation of the coordinate system.
 
