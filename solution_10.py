@@ -54,6 +54,7 @@ class CoordinateSystem:
     __str__(): Returns a string representation of the coordinate system.
     __repr__(): Returns a string representation of the coordinate system for internal use.
     """
+    segments =[]
 
     def __init__(self):
         self.segments = []
@@ -65,7 +66,7 @@ class CoordinateSystem:
         Parameters:
         segment (Segment): The segment to be added.
         """
-        self.segments.append(segment)
+       CoordinateSystem.segments.append(segment)
 
     def axis_intersection(self):
         """
@@ -75,7 +76,7 @@ class CoordinateSystem:
         int: The number of segments that intersect only one coordinate axis.
         """
         counter = 0
-        for elem in self.segments:
+        for elem in CoordinateSystem.segments:
             if elem.one_intersection:
                 counter += 1
         return counter
@@ -87,4 +88,4 @@ class CoordinateSystem:
         Returns:
         str: A string representation of the coordinate system as a list of segments.
         """
-        return ' '.join(str(elem) for elem in self.segments)
+        return ' '.join(str(elem) for elem in CoordinateSystem.segments)
